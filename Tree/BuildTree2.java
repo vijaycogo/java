@@ -59,65 +59,19 @@ public class BuildTree2 {
 
     }
 
-    private void traversal() {
-        System.out.print("pre_Order is = [ "  );
-        preOrder(this.root);
-        System.out.println("]");
-
-
-        System.out.print("in__Order is = [ "  );
-        inOrder(this.root);
-        System.out.println("]");
-
-        System.out.print("postOrder is = [ "  );
-        postOrder(this.root);
-        System.out.println("]");
-    }
-
-    private void preOrder(Node root) {
-        if(root==null){
-            return;
-        }
-        System.out.print(root.val + " ");
-        preOrder(root.left);
-        preOrder(root.right);
-    }
-
-    private void inOrder(Node root){
-        if(root==null){
-            return;
-        }
-        inOrder(root.left);
-        System.out.print(root.val + " ");
-        inOrder(root.right);
-    }
-
-    private void postOrder(Node root){
-        if(root==null){
-            return;
-        }
-        postOrder(root.left);
-        postOrder(root.right);
-        System.out.print(root.val + " ");
-    }
-
-
     public static void main(String[] args) {
         BuildTree2 tree = new BuildTree2();
-        // Scanner scanner = new Scanner(System.in);
-        // tree.populate(scanner);// this ask for input to insert node
-        tree.root = new Node(8);
-        tree.root.left = new Node(5);
-        tree.root.left.left = new Node(4);
-        tree.root.left.right = new Node(7);
-        tree.root.right = new Node(11);
-        tree.root.right.right = new Node(17);
-        tree.root.right.right.left = new Node(14);
-        tree.root.right.right.right = new Node(19);
+        Scanner scanner = new Scanner(System.in);
+        tree.populate(scanner);// this ask for input to insert node
+        // tree.root = new Node(8);
+        // tree.root.left = new Node(5);
+        // tree.root.left.left = new Node(4);
+        // tree.root.left.right = new Node(7);
+        // tree.root.right = new Node(11);
+        // tree.root.right.right = new Node(17);
+        // tree.root.right.right.left = new Node(14);
+        // tree.root.right.right.right = new Node(19);
         tree.display();
-        System.out.println();
-        System.out.println();
-        tree.traversal();
     }
 }
 
@@ -128,17 +82,6 @@ public class BuildTree2 {
     //                           4     7            17
     //
     //                                         14         19
-
-
-
-
-//       preOrder                   8 5 4 7 11 17 14 19 
-//       inOrder                    4 5 7 8 11 14 17 19 
-//       postOrder                  4 7 5 14 19 17 11 8
-
-
-
-
 
 
     // tree.display();
