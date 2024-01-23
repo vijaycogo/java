@@ -1,9 +1,6 @@
 package function;
 import java.util.Scanner;
 
-import javax.sql.rowset.spi.SyncFactoryException;
-import javax.swing.plaf.synth.SynthStyle;
-
 public class Functions {
     public static void printMyName(String name){
         System.out.println(name);
@@ -171,7 +168,8 @@ public class Functions {
         // fibonucciNumber(n);
 
         Gcd(n1, n2);
-
+        sc3.close();
+        sc4.close();
     }
     
 }
