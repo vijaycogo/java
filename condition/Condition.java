@@ -23,6 +23,8 @@ public class Condition{
         else{
             System.out.println(" number  is less");
         }
+        sc1.close();
+        sc2.close();
 
     
         // int n = 3;
@@ -46,6 +48,7 @@ public class Condition{
         // }
 
         int n = input_number.nextInt();
+        input_number.close();
         switch(n) {
         case 1 :
             System.out.println("Monday");
